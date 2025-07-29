@@ -11,7 +11,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173", // for dev
-  "https://your-netlify-site.netlify.app" // replace with your actual site
+  "https://job-portal-hari.netlify.app/" // replace with your actual site
 ];
 
 app.use(cors({
