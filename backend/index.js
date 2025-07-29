@@ -7,10 +7,19 @@ import userRoute from "./routes/user.route.js";
 import companyRoute from "./routes/company.route.js";
 import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
+const app = express();
+
+const allowedOrigins = [
+  "http://localhost:5173", // for dev
+  "https://your-netlify-site.netlify.app" // replace with your actual site
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 
 dotenv.config({});
-
-const app = express();
 
 // middleware
 app.use(express.json());
